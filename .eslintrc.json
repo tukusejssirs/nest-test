@@ -1,0 +1,135 @@
+{
+	"env": {
+		"jest": true,
+		"node": true
+	},
+	"extends": ["plugin:@typescript-eslint/recommended"],
+	"ignorePatterns": [".eslintrc.js"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"project": "tsconfig.json",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"eslint-plugin-tsdoc",
+		"@typescript-eslint/eslint-plugin"
+	],
+	"root": true,
+	"rules": {
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/indent": [
+			"error",
+			"tab",
+			{
+				"ArrayExpression": 1,
+				"FunctionDeclaration": {"parameters": "first"},
+				"ImportDeclaration": 1,
+				"ObjectExpression": 1,
+				"SwitchCase": 1,
+				"VariableDeclarator": "first",
+				"flatTernaryExpressions": false,
+				"ignoredNodes": [
+					"FunctionExpression > .params[decorators.length > 0]",
+					"FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+					"ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+				]
+			}
+		],
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-extra-parens": ["error"],
+		"array-bracket-spacing": [
+			"error",
+			"never"
+		],
+		"arrow-body-style": [
+			"error",
+			"as-needed"
+		],
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"comma-dangle": [
+			"error",
+			"never"
+		],
+		"computed-property-spacing": [
+			"error",
+			"never"
+		],
+		"for-direction": "error",
+		"indent": "off",
+		"keyword-spacing": [
+			"error",
+			{
+				"after": true,
+				"before": true
+			}
+		],
+		"linebreak-style": ["off"],
+		"max-len": [
+			"error",
+			{
+				"code": 160,
+				"ignoreComments": true,
+				"ignoreRegExpLiterals": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreTrailingComments": true,
+				"ignoreUrls": true,
+				"tabWidth": 2
+			}
+		],
+		"new-cap": "off",
+		"no-extra-parens": "off",
+		"no-lonely-if": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"no-new-wrappers": "error",
+		"no-tabs": [
+			"error",
+			{"allowIndentationTabs": true}
+		],
+		"no-trailing-spaces": "error",
+		"no-unexpected-multiline": "error",
+		"no-unreachable": "error",
+		"no-unused-vars": "off",
+		"no-var": "error",
+		"object-curly-spacing": [
+			"error",
+			"never"
+		],
+		"object-property-newline": [
+			"error",
+			{"allowAllPropertiesOnSameLine": true}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"allowTemplateLiterals": true,
+				"avoidEscape": true
+			}
+		],
+		"quote-props": [
+			"error",
+			"as-needed"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"sort-vars": [
+			"error",
+			{"ignoreCase": true}
+		],
+		"spaced-comment": [
+			"error",
+			"always"
+		],
+		"tsdoc/syntax": "warn",
+		"wrap-regex": "off"
+	}
+}
