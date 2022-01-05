@@ -1,14 +1,13 @@
 import {AppController} from './app.controller'
 import {AppService} from './app.service'
 import {Logger, Module} from '@nestjs/common'
-import {MikroOrmModule} from '@mikro-orm/nestjs'
 import {MqttModule} from 'nest-mqtt'
 
 @Module({
 	imports: [
-		MikroOrmModule.forRoot(),
 		MqttModule.forRoot({
-			port: 1883,
+			port: 4000,
+			protocol: 'ws',
 			logger: {
 				useValue: new Logger('MqttClient')
 			}
