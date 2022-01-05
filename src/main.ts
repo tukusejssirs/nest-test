@@ -8,6 +8,7 @@ async function bootstrap() {
 
 	app.register(proxy, {
 		upstream: 'ws://127.0.0.1:4000',
+		websocket: true,
 		prefix: '/mqtt',
 		http2: false
 	})
